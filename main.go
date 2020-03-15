@@ -8,8 +8,11 @@ import (
 
 func main() {
 	beego.LoadAppConfig("ini", "conf/app.conf")
-	if beego.BConfig.RunMode == "dev" {
 
+	if beego.BConfig.RunMode == "dev" {
+		beego.SetStaticPath("/swagger", "swagger")
+		beego.BConfig.WebConfig.DirectoryIndex = true
 	}
+
 	beego.Run()
 }

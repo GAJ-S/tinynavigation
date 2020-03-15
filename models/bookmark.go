@@ -15,7 +15,7 @@ type BookMark struct {
 }
 
 func init() {
-	orm.RegisterModel(new(BookMark))
+	//orm.RegisterModel(new(BookMark))
 }
 
 // AddBookMark insert a new BookMark into database and returns

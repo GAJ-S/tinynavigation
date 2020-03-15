@@ -9,4 +9,7 @@ func init() {
 	//config := Config().
 	orm.RegisterDriver("sqlite", orm.DRSqlite)
 	orm.RegisterDataBase("default", "sqlite3", "./db/data.db")
+
+	orm.RegisterModel(new(BookMark))
+	orm.RunSyncdb("default", false, true)
 }
